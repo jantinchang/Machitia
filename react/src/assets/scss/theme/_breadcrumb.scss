@@ -1,0 +1,32 @@
+/**=====================
+    57. breadcrumb CSS Start
+==========================**/
+.breadcrumb-colored{
+	li{
+		a{
+			color:$white;
+		}
+		&.active{
+			color:$white;
+			opacity:0.7;
+		}
+	}
+	.breadcrumb-item{
+		&:before{
+			color: $white;
+		}
+	}
+	.breadcrumb-item.txt-dark{
+		&:before{
+			color: $black;
+		}
+	}
+}
+.breadcrumb-item{
+	&.active{
+		text-transform: capitalize;
+	}
+}
+/**=====================
+    57. breadcrumb CSS ends
+==========================**/

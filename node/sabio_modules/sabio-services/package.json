@@ -1,0 +1,13 @@
+{
+  "name": "sabio-services",
+  "version": "1.0.0",
+  "description": "Providing access to Service functions and classes that call db or external Api's",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Sabio - Gregorio Rojas",
+  "license": "ISC",
+  "types": "index.d.ts",
+  "repository": {
+    "url": "sabiocode.la"
+  }
+}

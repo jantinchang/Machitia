@@ -1,0 +1,74 @@
+.blogList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.blogPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.newButton {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.newAddButton {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.dropdownSubjectMenu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.dropdownButton {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.editButton {
+  float: left;
+}
+
+.readButton {
+  float: right;
+}
+
+.blogImg {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.submission {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.singleImage {
+  height: 600px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.blogHeader {
+  text-align: center;
+  padding-top: 30px;
+  color: #26c6da;
+  font-size: 60px;
+}
+
+.reroute {
+  padding-top: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

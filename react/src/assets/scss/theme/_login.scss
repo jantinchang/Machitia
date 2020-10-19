@@ -1,0 +1,194 @@
+/**=====================
+    25. Authentication CSS Start
+==========================**/
+//urls
+$url_0: url(/assets/images/auth-layer.png);
+$url_1: url(/assets/images/auth-bg-1.jpg);
+$url_2: url(/assets/images/flower/01.png);
+$url_3: url(/assets/images/flower/02.png);
+$url_4: url(/assets/images/flower/03.png);
+$url_5: url(/assets/images/flower/04.png);
+
+
+%auth-mixin1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+.authentication-main {
+  background: $auth-bg-color;
+  .auth-innerleft {
+    @extend %auth-mixin1;
+    background: $url_0, $white;
+    box-shadow: 1px 1px 1px 0 $light-color;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 33.3333333333%;
+    height: 100%;
+    hr {
+      width: 250px;
+    }
+    .logo-login {
+      width: 35%;
+    }
+    .social-media li {
+      color: $dark-gray;
+      font-size: 18px;
+      &:hover {
+        color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+  }
+  .auth-innerright {
+    @extend %auth-mixin1;
+    background: $auth-bg-color;
+    justify-content: left;
+  }
+}
+.authentication-box {
+  width: 645px;
+  z-index: 2;
+  h3 {
+    color: $dark-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  h4 {
+    color: $theme-body-font-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  h6 {
+    color: $theme-body-sub-title-color;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+}
+.auth-bg {
+  background: $url_1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 100px;
+}
+.auth-bg-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.31);
+  padding: 50px 0;
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+  }
+}
+.auth-bg-effect {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .first-effect {
+    width: 250px;
+    height: 250px;
+    background: $url_2 no-repeat;
+    background-size: cover;
+    animation: rotate-effect 40s infinite linear;
+    position: absolute;
+    bottom: 130px;
+  }
+  .second-effect {
+    width: 220px;
+    height: 220px;
+    background: $url_3 no-repeat;
+    background-size: cover;
+    animation: rotate-effect 40s infinite linear;
+    position: absolute;
+    bottom: 65px;
+    left: 61%;
+  }
+  .third-effect {
+    width: 200px;
+    height: 200px;
+    background: $url_4 no-repeat;
+    background-size: cover;
+    animation: rotate-effect 40s infinite linear;
+    position: absolute;
+    bottom: 45px;
+    left: 38%;
+  }
+  .fourth-effect {
+    width: 200px;
+    height: 200px;
+    background: $url_5 no-repeat;
+    background-size: cover;
+    animation: rotate-effect 40s infinite linear;
+    position: absolute;
+    bottom: 407px;
+    left: 1%;
+  }
+}
+.reset-password-box {
+  width: 645px;
+  z-index: 2;
+  .card {
+    padding: 30px;
+  }
+  .theme-form {
+    .form-group {
+      label {
+        font-size: 12px;
+        color: $theme-body-sub-title-color;
+      }
+      .form-control {
+        font-size: 18px;
+      }
+      .btn {
+        font-size: 18px;
+        padding: 6px 24px;
+      }
+    }
+    .opt-box {
+      background: $light-body-bg-color;
+      .opt-text {
+        font-size: 36px;
+        padding: 0;
+      }
+    }
+  }
+  .reset-password-link {
+    color: $theme-body-sub-title-color;
+  }
+  .reset-password-box h6 {
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**=====================
+    25. Authentication CSS Ends
+==========================**/
+
+
+
+
+

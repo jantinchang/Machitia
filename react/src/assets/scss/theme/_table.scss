@@ -1,0 +1,124 @@
+/**=====================
+     39. Table  CSS Start
+==========================**/
+.table{
+	margin-bottom: 0;
+	th,td{
+		color: $theme-body-font-color;
+	}
+	[class*='bg-']{
+		color: $white;
+	}
+	.bg-light{
+		color: $theme-body-font-color;
+	}
+	tfoot{
+		font-weight:bold;
+	}
+}
+.table-inverse {
+	th,td{
+		color: $white;
+	}
+}
+.table[class*='bg-']{
+	th,td{
+		color: $white;
+	}
+}
+.table-hover tbody tr:hover {
+	background-color: $light;
+}
+
+//Sizing class
+.table-xl{
+	td,th{
+		padding: 1.25rem 2rem;
+		font-size: 120%;
+	}
+}
+.table-lg{
+	td,th{
+		padding: .9rem 2rem;
+		font-size: 110%;
+	}
+}
+.table-de{
+	td,th{
+		padding: .75rem 2rem;
+	}
+}
+.table-sm{
+	th,td{
+		padding: .5rem 2rem;
+		font-size: 90%;
+	}
+}
+.table-xs{
+	th,td{
+		padding: 0.2rem 2rem;
+		font-size: 80%;
+	}
+}
+
+//Table Border
+.table-border-horizontal {
+	tr,th,td{
+		border-top: 1px solid #dee2e6;
+		padding: .75rem 2rem;
+	}
+}
+.table-border-vertical{
+	tr,th,td{
+		border-top: 0;
+		border-right: 1px solid #dee2e6;
+	}
+	tr{
+		td{
+			&:last-child{
+				border-right: none;
+			}
+		}
+	}
+}
+
+.table-bordernone{
+	td{
+		border: 0;
+	}
+	.bd-t-none{
+		border-top: none;
+	}
+	.u-s-tb{
+		padding: 11px;
+	}
+}
+.table-inverse{
+	color: $white;
+	background-color: #292b2c;
+	th,td{
+		border-color: $white;
+	}
+	&.table-bordered {
+		border: 0;
+	}
+}
+
+.table-striped{
+	tbody {
+		tr
+		{
+			&:nth-of-type(odd){
+				background-color: rgba(245, 247, 250, 0.5);
+			}
+		}
+	}
+}
+.table-bordered{
+	td,th{
+		border-color: $light;
+	}
+}
+/**=====================
+     39.Table CSS Ends
+==========================**/

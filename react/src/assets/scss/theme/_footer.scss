@@ -1,0 +1,81 @@
+/**=====================
+     47. Footer CSS Start
+==========================**/
+.main-footer{
+  p{
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  .hidden-xs{
+    display: inline-block;
+    ul{
+      li{
+        display: inline-block;
+        padding-right: 15px;
+        &:last-child{
+          padding-right: 0;
+        }
+        a{
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+.footer-links{
+  text-align:right;
+  li{
+    display: inline-block;
+    padding-right: 15px;
+    a{
+      font-size: 12px;
+    }
+  }
+}
+footer{
+  background-color: $white;
+  border-top: 1px solid $light-color;
+  padding: 15px;
+  position: absolute;
+  bottom: -52px;
+  width: 100%;
+  left: 0;
+  a{
+    font-weight: 600;
+  }
+  &.footer-starter-kit{
+    bottom: -52px;
+  }
+}
+.dark-footer{
+  background-color: $dark-card-background;
+  p{
+    color: $white;
+  }
+  li{
+    a{
+      color: $white;
+    }
+  }
+}
+.page-wrapper{
+  .page-body-wrapper{
+    .footer-fix{
+      position: fixed;
+      margin-left: 250px;
+      transition: all 0.3s ease;
+      padding-right:250px;
+      bottom: 0;
+    }
+  }
+  .sidebar-close{
+    .footer-fix{
+      margin-left: 0;
+      transition: all 0.3s ease;
+    }
+  }
+}
+/**=====================
+     47. Footer CSS Ends
+==========================**/
+

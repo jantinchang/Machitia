@@ -1,0 +1,12 @@
+{
+  "name": "sabio-data",
+  "version": "1.0.0",
+  "description": "Data Acces Wrapper for Tedious",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Sabio - Gregorio Rojas",
+  "license": "ISC",
+  "repository": {
+    "url": "sabiocode.la"
+  }
+}

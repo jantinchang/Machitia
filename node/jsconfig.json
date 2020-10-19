@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "module": "commonjs"
+  },
+  "allowJs": true,
+  "compileOnSave": true,
+  "include": ["app/**/*", "sabio-module/**/*", "TestUpload.js"]
+}

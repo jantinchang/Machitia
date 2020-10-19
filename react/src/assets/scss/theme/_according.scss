@@ -1,0 +1,58 @@
+/**=====================
+    24. According CSS start
+==========================**/
+.default-according{
+    .card{
+        margin-bottom: 0;
+        &+.card{
+            margin-top: 10px;
+        }
+        .btn-link{
+            font-weight: 600;
+            color: $theme-body-font-color;
+        }
+        .btn-link{
+            &:focus,&:hover{
+                text-decoration: none;
+            }
+        }
+        .card-header{
+            padding: 0.75rem 1.25rem;
+            i{
+                position: absolute;
+                left: 18px;
+                font-size: 20px;
+                top: 20px;
+            }
+            h5{
+                margin-top: 2px;
+            }
+        }
+    }
+}
+.default-according.style-1{
+    button{
+        width: 100%;
+        text-align: left;
+        &[aria-expanded="true"]{
+            &:before{
+                content: "\eb73";
+                font-family: $font-ICO;
+                right: 20px;
+                position: absolute;
+                transition: 0.4s;
+            }
+        }
+        &[aria-expanded="false"]{
+            &:before{
+                content: "\eb7a";
+                font-family: $font-ICO;
+                right: 20px;
+                position: absolute;
+            }
+        }
+    }
+}
+/**=====================
+     24. According CSS Ends
+==========================**/

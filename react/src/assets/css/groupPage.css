@@ -1,0 +1,43 @@
+.basicCardImg {
+  /* text-align: center; */
+  height: 200px;
+  width: 200px;
+}
+.groupPageContainer {
+  top: 20px;
+}
+.groupPageDiv {
+  padding-top: 20px;
+}
+.logoPicture {
+  height: 250px;
+}
+.groupInfoCard {
+  text-align: center;
+}
+.joinButton {
+  cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+.unfollowButton {
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+.aboutGroupHeader {
+  text-shadow: 0.022em 0.022em 0.022em rgb(255, 255, 255);
+  color: #ab8ce4;
+}
+
+.boxShadow {
+  box-shadow: 0 0 0 1px rgba(140, 0, 255, 0.15),
+    0 2px 3px rgba(107, 26, 173, 0.15);
+}

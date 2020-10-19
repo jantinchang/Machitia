@@ -1,0 +1,13 @@
+{
+  "name": "sabio-routing",
+  "version": "1.0.0",
+  "description": "Declarative routing with Descriptors",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Sabio - Gregorio Rojas",
+  "license": "ISC",
+  "types": "index.d.ts",
+  "repository": {
+    "url": "sabiocode.la"
+  }
+}

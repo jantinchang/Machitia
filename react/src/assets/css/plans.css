@@ -1,0 +1,17 @@
+.crm-top-widget .media .media-body h4 {
+  text-align: center;
+}
+.planTitle {
+  text-transform: uppercase;
+  font-size: 250%;
+}
+
+.conceptsTitleText {
+  text-align: center;
+}
+
+.titleText {
+  font-size: calc(1em + 1vw);
+  letter-spacing: 0.01em;
+  text-align: center;
+}

@@ -1,0 +1,820 @@
+/**=====================
+      Modern layout CSS Start
+==========================**/
+//colors
+$color_lavender_approx: #ac68fd;
+$color_purple_heart_approx: #5934fc;
+$color_medium_purple_approx: #a34ffe;
+$color_cerise_red_approx: #e4326b;
+$color_mantis_approx: #88d563;
+
+//urls
+$url_0: url(/assets/images/dashboard/search-white.png);
+
+.svg-animation {
+  .wave-template {
+    opacity: 0;
+    position: absolute;
+  }
+  circle {
+    fill: $color_lavender_approx;
+    opacity: 0.3;
+  }
+  svg {
+    > use {
+      transform: translate(50%, 50%);
+    }
+    > circle:last-child {
+      fill: $color_purple_heart_approx;
+      opacity: 1;
+    }
+  }
+  #rp1 {
+    animation: ripple1 1s linear infinite;
+  }
+  #rp2 {
+    animation: ripple2 1s linear infinite;
+  }
+  #rp3 {
+    animation: ripple3 1s linear infinite;
+  }
+  .svg-container {
+    position: absolute;
+    z-index: 10;
+  }
+  .effect-svg1 {
+    top: -65%;
+    left: -5%;
+    transform: scale(0.5);
+  }
+  .effect-svg2 {
+    top: -88%;
+    left: 30%;
+  }
+  .effect-svg3 {
+    top: -28%;
+    right: -5%;
+  }
+  .effect-svg4 {
+    top: 113%;
+    left: 0;
+  }
+}
+@keyframes ripple2 {
+  0% {
+    transform: scale(3.5);
+  }
+  100% {
+    transform: scale(5.5);
+  }
+}
+@keyframes ripple3 {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(3.5);
+  }
+}
+@keyframes ripple1 {
+  0% {
+    transform: scale(5.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(8.5);
+    opacity: 0.0;
+  }
+}
+.modern-layout {
+  .b-danger{
+    border: 4px solid $color_cerise_red_approx !important;
+  }
+  .annual-report{
+    height: 147px;
+  }
+  .media-width{
+    max-width: 100px;
+  }
+  .set-image-border{
+    img{
+      padding: 10px 9px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+    }
+  }
+  .finance-status-image{
+    padding-top: 10px;
+  }
+  .annual-report-detail {
+    li{
+      font-weight: 600;
+      margin-bottom: 15px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      span{
+        font-weight: normal;
+      }
+      .number {
+        position: relative;
+        padding-left: 45px;
+        &:before{
+          width: 36px;
+          height: 14px;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 3px;
+          border-radius: 25px;
+        }
+      }
+      .success-number{
+        &:before{
+          background-color: $color_mantis_approx;
+        }
+      }
+      .info-number{
+        &:before{
+          background-color: $color_purple_heart_approx;
+        }
+      }
+      .danger-number{
+        &:before{
+          background-color: $color_cerise_red_approx;
+        }
+      }
+      .primary-number{
+        &:before{
+          background-color: $color_medium_purple_approx;
+        }
+      }
+    }
+  }
+  .header {
+    height: 400px;
+    background: linear-gradient(22deg, $color_purple_heart_approx 0, $color_medium_purple_approx 100%);
+    .page-main-header {
+      position: relative;
+      left: 0;
+      right: 0;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: none;
+      display: block;
+      height: auto;
+      background: transparent;
+      z-index: 2;
+      border-bottom: 1px solid $color_medium_purple_approx;
+      .modern-header {
+        .main-header-right {
+          float: right;
+          width: auto;
+          padding: 0;
+          .nav-right {
+            .notification {
+              top: 50px;
+            }
+            .onhover-show-div {
+              top: 100px;
+            }
+            > ul {
+              > li {
+                padding: 60px 0;
+              }
+            }
+            ul {
+              li {
+                i {
+                  font-size: 20px;
+                }
+              }
+              .onhover-dropdown{
+                a{
+                  .badge{
+                    background-color:$white;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .header-inner {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 100%;
+        }
+        .search-form {
+          input {
+            color: $light-gray;
+            border: none;
+            //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+            border-radius: 20px;
+            background-color: #9173ef54;
+            background-image: $url_0;
+            &:-ms-input-placeholder {
+              color: $color_medium_purple_approx;
+            }
+            &:-moz-placeholder {
+              color: $color_medium_purple_approx;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          input::-webkit-input-placeholder {
+            color: $color_medium_purple_approx;
+          }
+          input::-moz-placeholder {
+            color: $color_medium_purple_approx;
+          }
+        }
+      }
+    }
+    .vertical-menu-main{
+      position: absolute;
+      background: transparent;
+      top: 159px;
+      width: 58%;
+      margin: 0 auto;
+      left: 0;
+      right:0;
+      box-shadow: none;
+      nav{
+        ul{
+          li{
+            a{
+              color: $white;
+              border-right: 1px solid $color_medium_purple_approx;
+            }
+            &:last-child{
+              a{
+                border-right: none;
+              }
+            }
+            ul{
+              li{
+                a{
+                  color: $theme-body-font-color;
+                  border-right: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1200px){
+      .pixelstrap{
+        ul {
+          a{
+            &:hover,
+            &:focus,
+            &:active,
+            &.highlighted{
+              color: $primary-color;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .number {
+    font-family: $font-open-sans, $font-serif;
+  }
+  button {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid $light-semi-gray;
+    color: $black;
+    text-align: left;
+    font-weight: 600;
+    padding: 6px 15px;
+  }
+  .dropdown-menu {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 20px;
+  }
+  .dropdown{
+    position: relative;
+    .arrow-after-dropdown{
+      &::after{
+        content: "\f107";
+        font-family: FontAwesome;
+        position: absolute;
+        border-top: none;
+        color: #6c757d;
+        right: 20px;
+      }
+    }
+  }
+  .font-danger {
+    color: $color_cerise_red_approx !important;
+  }
+  .font-success {
+    color: $color_mantis_approx !important;
+  }
+  .font-primary {
+    color: $color_medium_purple_approx !important;
+  }
+  .font-info {
+    color: $color_purple_heart_approx !important;
+  }
+  .card {
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0;
+    .card-header {
+      border-bottom: none;
+      padding: 30px;
+      h5 {
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .finance-stts {
+    border: none;
+    padding: 0;
+    margin: 0;
+    height: 257px;
+    .ct-series-a{
+      .ct-point,
+      .ct-line,
+      .ct-bar,
+      .ct-slice-donut{
+        stroke: $color_medium_purple_approx;
+      }
+    }
+  }
+.top-charts {
+  margin-top: -180px;
+  .card-header{
+    h5{
+      padding-top: 7px;
+    }
+  }
+  .sales-report-chart {
+    .flot-chart-container {
+      border: 0;
+      padding: 0;
+      height: 415px;
+    }
+  }
+  .total-earning .flot-chart-container {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    height: 322px;
+  }
+}
+footer {
+  position: relative;
+  background: linear-gradient(22deg, $color_purple_heart_approx 0, $color_medium_purple_approx 100%);
+  padding: 25px;
+  bottom: 0;
+}
+.page-body-wrapper .page-body {
+  background-color: $light-color;
+  min-height: calc(100vh - 400px);
+  margin-top: 0 !important;
+}
+.testimonial {
+  p {
+    line-height: 2;
+    font-style: normal;
+    margin: 0;
+  }
+  .owl-dots{
+    display: none;
+  }
+  &.owl-theme {
+    .owl-nav {
+      position: absolute;
+      top: -110px;
+      right: 0;
+      button{
+        span{
+          color: #000;
+          font-size: 30px;
+        }
+      }
+      [class*='owl-']{
+        &:hover {
+          background:$white;
+          text-decoration: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.widget-joins .media {
+  padding: 42px 35px 50px 50px;
+  .media-body h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+.annual-report canvas {
+  position: relative;
+  right: 60px;
+  top: -20px;
+}
+.production-chart .flot-chart-container {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 163px;
+}
+.tech-chart .flot-chart-container {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 181px;
+  #tech-chart{
+    svg{
+      filter: drop-shadow(12px 12px 7px rgba(119, 119, 119, 0.4));
+    }
+  }
+}
+.products-listing .flot-chart-container {
+  padding: 0;
+  margin: 0;
+  border: none;
+  top: 25px;
+  position: relative;
+  height: 300px;
+  margin-top: -150px;
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1366px){
+  .sales-report-chart{
+    .flot-chart-container{
+      height: 472px;
+    }
+  }
+  .annual-report{
+    height: 153px;
+  }
+}
+@media only screen and (max-width: 1366px){
+  //modern layout
+  .svg-animation{
+    .effect-svg3 {
+      top: -56%;
+      right: -4%;
+      transform: scale(0.4);
+    }
+    .effect-svg4 {
+      top: 113%;
+      left: -8%;
+      transform: scale(0.4);
+    }
+    .effect-svg2 {
+      transform: scale(0.4);
+    }
+    .effect-svg1 {
+      transform: scale(0.4);
+    }
+
+  }
+  .widget-joins{
+    &:before{
+      display: block;
+    }
+    &:after{
+      display: block;
+    }
+    .media{
+      padding: 50px;
+      .media-body{
+        h3{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .header {
+    .vertical-menu-main {
+      width: 82%;
+    }
+  }
+}
+@media only screen and (max-width: 1199px){
+  //modern layout
+  .annual-report{
+    height: auto;
+  }
+  .vertical-menu-main{
+    nav{
+      ul{
+        li{
+          a{
+            color: $theme-body-font-color !important;
+            border-right: none !important;
+          }
+        }
+      }
+    }
+  }
+  .sm{
+    top: 151px;
+  }
+  .top-charts {
+    margin-top: -249px;
+  }
+  .header {
+    .page-main-header {
+      border-bottom: none;
+    }
+  }
+  .vertical-mobile-sidebar {
+    color: $white;
+    margin-right: 0;
+  }
+  .sales-report-chart {
+    .flot-chart-container{
+      height: 375px;
+    }
+  }
+  .annual-report {
+    canvas {
+      right: 0;
+      width: 100%!important;
+
+    }
+
+  }
+  .widget-joins{
+    .media{
+      padding: 35px;
+    }
+
+  }
+  .finance-status-image {
+    padding-top: 4px;
+  }
+  .p-t-5{
+    padding-top: 11px !important;
+  }
+  .media-width{
+    min-width: 97px;
+  }
+}
+@media only screen and (max-width: 991px){
+  //modern layout
+  button {
+    margin: 0 auto;
+  }
+  .sm{
+    top: 156px;
+  }
+  .main-header-right {
+    .nav-right{
+      > .mobile-toggle{
+        .icon-more {
+          vertical-align: middle;
+          color: $white;
+        }
+      }
+      > ul{
+        background-color: transparent !important;
+        box-shadow: none !important;
+        > li{
+          padding: 20px 0 !important;
+        }
+      }
+    }
+  }
+  .header{
+    .page-main-header {
+      .modern-header {
+        .main-header-right {
+          .nav-right {
+            .notification{
+              top: 11px;
+            }
+            .onhover-show-div {
+              top: 60px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .testimonial{
+    &.owl-theme{
+      .owl-nav {
+        top: -91px;
+      }
+    }
+  }
+  .page-body-wrapper {
+    .page-body {
+      .top-charts{
+        margin-top: -244px!important;
+      }
+    }
+  }
+  .header-inner{
+    .logo-wrapper{
+      width: 63%;
+      margin-top: 20px;
+    }
+    &.float-sm-left{
+      margin-top: 6px;
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  .widget-joins{
+    &:before,
+    &:after{
+      display: none;
+    }
+    .row{
+      [class*="col-"]{
+        .media {
+          border-bottom: 1px solid $light-semi-gray;
+          .media-body{
+            &.pl-1{
+              padding-left: 12px !important;
+            }
+          }
+        }
+        &:last-child{
+          .media{
+            border-bottom: none;
+          }
+        }
+        &:first-child{
+          .media{
+            .media-body{
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //modern layout
+  .svg-animation{
+    display: none;
+  }
+  .b-r-light{
+    border-right: none!important;
+  }
+  .header{
+    padding-top: 35px;
+    .page-main-header {
+      .modern-header {
+        .header-inner{
+          margin-top: 10px;
+        }
+        .main-header-right {
+          .nav-right {
+            text-align: center;
+            margin: 15px 0;
+            > ul  {
+              top: 42px;
+              li {
+                padding: 5px 0;
+              }
+            }
+            .notification-dropdown{
+              &.onhover-show-div{
+                li{
+                  padding: 12px 20px;
+                }
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+  .page-body-wrapper {
+    .page-body {
+      .top-charts{
+        margin-top: -85px;
+      }
+      .widget-joins{
+        .media{
+          .mr-3{
+            margin-right: 10px !important;
+          }
+        }
+      }
+    }
+  }
+  .annual-report {
+    canvas {
+      right: unset;
+      top: 0;
+      left: 0px;
+      margin-top: 10px;
+      width: 100% !important;
+    }
+
+  }
+  .products-listing {
+    .flot-chart-container{
+      margin-top: -50px;
+    }
+  }
+  .header{
+    .page-main-header{
+      .modern-header{
+        .header-inner {
+          margin-top: 0;
+          .logo-wrapper {
+            width: 80%;
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .sm{
+    top: 121px;
+  }
+  .testimonial{
+    &.owl-theme{
+      .owl-nav {
+        top: -80px;
+      }
+    }
+  }
+  .header {
+    .page-main-header {
+      .modern-header{
+        .header-inner{
+          .logo-wrapper {
+            width: 80%;
+          }
+        }
+      }
+      .header-inner{
+        .search-form{
+          .form-group{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .main-header-right{
+        .nav-right{
+          > ul{
+            top: 29px !important;
+          }
+        }
+      }
+    }
+  }
+  .page-body-wrapper {
+    .page-body{
+      .top-charts {
+        margin-top: -279px !important;
+        .text-md-right{
+          text-align: center;
+          margin-top: 15px;
+        }
+      }
+      .p-t-5 {
+        padding-top: 6px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px){
+  .sm{
+    top: 124px;
+  }
+  .page-body-wrapper {
+    .page-body{
+      .top-charts {
+        margin-top: -276px !important;
+        .sales-report-chart{
+          .flot-chart-container {
+            height: 300px;
+          }
+        }
+        .total-earning{
+          .flot-chart-container {
+            height: 255px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+/**=====================
+      Modern layout CSS Ends
+==========================**/

@@ -1,0 +1,13 @@
+{
+  "name": "sabio-models",
+  "version": "1.0.0",
+  "description": "Models used to describe the data structures and provide data validation",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Sabio - Gregorio Rojas",
+  "license": "ISC",
+  "types": "index.d.ts",
+  "repository": {
+    "url": "sabiocode.la"
+  }
+}

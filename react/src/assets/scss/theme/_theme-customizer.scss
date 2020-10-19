@@ -1,0 +1,388 @@
+/**=====================
+   59. Customizer  CSS Start
+==========================**/
+.main-theme-layout-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.floated-customizer-panel {
+  background-color: $white;
+  position: fixed;
+  right: -85px;
+  -webkit-box-shadow: 0 15px 125px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 15px 125px rgba(0, 0, 0, 0.22);
+  border-radius: 6px;
+  color: $dark-color;
+  bottom: 70px;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.7s ease;
+  -webkit-transform: translateY(110%) scale(0);
+  transform: translateY(110%) scale(0);
+  height: 650px;
+  overflow: auto;
+  width: 0;
+  &.active {
+    visibility: visible;
+    width: 400px;
+    right: 35px;
+    opacity: 1;
+    -webkit-transform: translateY(0px) scale(1);
+    transform: translateY(0px) scale(1);
+  }
+  .close-customizer-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+  }
+  .customizer-title {
+    border-bottom: 1px solid $light-color;
+    padding: 20px 20px 15px;
+    h5{
+      margin-bottom: 0;
+      font-weight: 700;
+    }
+  }
+
+  .fcp-group{
+    padding: 20px;
+    border-bottom: 1px solid $light-color;
+  }
+
+  .fcp-header {
+    font-weight: 500;
+    font-family: inherit;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    color: $dark-color;
+    font-size: 1.08rem;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .icon-w {
+      display: inline-block;
+      vertical-align: middle;
+      color: $info-color;
+      font-size: 24px;
+      margin-right: 10px;
+      i {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .fcp-content {
+    .navigation-color-option{
+      .radio{
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        label{
+          &:before{
+            width: 35px;
+            height: 35px;
+            border-radius: 5px;
+          }
+          &:after{
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    .fcp-group-header {
+      font-weight: 600;
+      font-family: inherit;
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      color: $white;
+      background-color: $primary-color;
+      padding-top: 10px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    .fcp-group-header-sub {
+      color: $dark-color;
+      font-weight: 600;
+      font-family: inherit;
+    }
+    .fcp-group-contents {
+      .nav-material.nav-tabs{
+        .nav-link.active,.nav-item.show,.nav-link:focus,.nav-link:hover {
+          border-bottom: none !important;
+        }
+      }
+      .nav-tabs{
+        margin-bottom: 20px;
+        .nav-item{
+          width: 100%;
+          font-weight: 500;
+          .nav-link{
+            &.active{
+              background-color: $primary-color;
+              color: $white;
+              padding: 6px;
+              font-size: 15px;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    .fcp-group-contents .fcp-field {
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding-bottom: 7px;
+      margin-bottom: 7px;
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      label {
+        font-size: .9rem;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 54%;
+        flex: 0 0 54%;
+        padding-right: 10px;
+        margin: 0;
+      }
+      .fcp-colors {
+        margin-left: auto;
+        .color-selector {
+          display: inline-block;
+          vertical-align: middle;
+          height: 14px;
+          width: 14px;
+          border-radius: 10px;
+          margin: 0px 5px;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          &.selected, &:hover {
+            -webkit-box-shadow: 0px 0px 0px 2px $white, 0px 0px 0px 4px #88b8ff;
+            box-shadow: 0px 0px 0px 2px $white, 0px 0px 0px 4px #88b8ff;
+          }
+        }
+        .color-bright {
+          background-color: $info-color;
+          border: 1px solid $info-color;
+        }
+        .color-dark {
+          background-color: $dark-color;
+          border: 1px solid $dark-color;
+        }
+        .color-light {
+          background-color: $white;
+          border: 1px solid $light-color;
+        }
+        .color-transparent {
+          background-color: $white;
+          border: 1px solid $light-color;
+          position: relative;
+          overflow: hidden;
+          &:before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            background-color: $light-gray;
+          }
+          &:after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background-color: $light-gray;
+          }
+        }
+      }
+    }
+  }
+}
+.floated-customizer-btn {
+  -webkit-animation-name: jumpUp;
+  animation-name: jumpUp;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  z-index: 9;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: $primary-color;
+  -webkit-box-shadow: 0 5px 10px rgba(19, 19, 19, 0.17);
+  box-shadow: 0 5px 10px rgba(19, 19, 19, 0.17);
+  border-radius: 5px;
+  color: $white;
+  padding: 12px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 1.08rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  &.third-floated-btn {
+    right: 35px;
+  }
+  > {
+    .icon-w {
+      line-height: 1;
+      vertical-align: middle;
+      display: inline-block;
+      -webkit-animation: os-rotating 2s linear infinite;
+      animation: os-rotating 2s linear infinite;
+      i {
+        font-size: 24px;
+      }
+    }
+    span {
+      margin-left: 10px;
+      vertical-align: middle;
+      display: inline-block;
+      font-weight: 500;
+      + span {
+        margin-left: 5px;
+      }
+    }
+  }
+  &:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color: $dark-color;
+  }
+}
+
+.floated-customizer-panel {
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px $light-gray;
+  }
+}
+.nav-navigation-main {
+  border-bottom: 1px solid $primary-color;
+  li {
+    width: 50%;
+    text-align: center;
+  }
+}
+.nav-navigation-color-main {
+  border-bottom: 1px solid $primary-color;
+  li {
+    width: 33.33%;
+    text-align: center;
+  }
+}
+
+
+/*======= Brand css starts ===========*/
+$layout-name:
+        primary,
+        secondary,
+        success,
+        danger,
+        info,
+        light,
+        dark,
+        warning;
+$layout-color : $primary-color,
+$secondary-color,
+$success-color,
+$danger-color,
+$info-color,
+$light-color,
+$dark-color,
+$warning-color;
+
+$dark-layout-color : darken($primary-color, 10%),
+darken($secondary-color , 15%),
+darken($success-color, 15%),
+darken($danger-color, 15%),
+darken($info-color, 15%),
+darken($light-color, 15%),
+darken($dark-color, 15%),
+darken($warning-color, 15%);
+
+@each $var in $layout-name {
+  $i: index($layout-name, $var);
+  [semilight-bg-color='bg-#{$var}'],[header-bg-color='bg-#{$var}']{
+    background-color: nth($layout-color, $i) !important;
+  }
+  [header-bg-color='bg-#{$var}']{
+    img{
+      filter: brightness(0) invert(1);
+    }
+    .txt-dark{
+      color: $white !important;
+    }
+    .search-form input{
+      filter: brightness(0) invert(1);
+    }
+    .switch input:checked + .switch-state {
+      background-color: $light-gray;
+    }
+    .nav-right .notification{
+      border: 1px solid $white;
+      padding: 2px 4px !important;
+      background-color: nth($layout-color, $i) !important;
+    }
+  }
+  [semilight-bg-color='bg-#{$var}-light-color'],[header-bg-color='bg-#{$var}-light-color']{
+    background-color: nth($dark-layout-color, $i) !important;
+  }
+  [header-bg-color='bg-#{$var}-light-color']{
+    img{
+      filter: brightness(0) invert(1);
+    }
+    .txt-dark{
+      color: $white !important;
+    }
+    .search-form input{
+      filter: brightness(0) invert(1);
+    }
+    .switch input:checked + .switch-state {
+      background-color: $light-gray;
+    }
+    .nav-right .notification{
+      border: 1px solid $white;
+      padding: 2px 4px !important;
+      background-color: nth($layout-color, $i) !important;
+    }
+  }
+}
+
+/*======= Brand css ends ===========*/
+
+/**=====================
+     59.Customizer CSS Ends
+==========================**/

@@ -1,0 +1,142 @@
+.lsx-emojipicker-emoji {
+  span {
+    display: inline-block;
+    font-size: 24px;
+    width: 33px;
+    height: 35px;
+    cursor: pointer;
+    &:HOVER {
+      //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+      transform: scale(1.1);
+    }
+    img.emoji {
+      width: 25px;
+      margin: 5px 4px;
+      cursor: pointer;
+      //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+      transition: all 0.1s ease-in-out;
+      &:HOVER {
+        //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: scale(1.1);
+      }
+    }
+  }
+  &.lsx-emoji-tab {
+    width: 220px;
+    padding: 8px;
+    height: 200px;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    overflow: auto;
+    &.hidden {
+      display: none;
+    }
+  }
+}
+.lsx-emojipicker-appender {
+  position: relative;
+}
+.lsx-emojipicker-container {
+  background: $white;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  z-index: 99999999999;
+  position: absolute;
+  top: -270px;
+  right: -35px;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 12px 29px rgba(0,0,0,.2);
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all 0.5s ease-in-out;
+  display: none;
+  margin-top: -30px;
+  .loader {
+    border: 6px solid #ececec;
+    border-top: 6px solid #d8d8d8;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.2s linear infinite;
+    margin: 0 auto;
+  }
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    clear: both;
+    top: 100%;
+    right: 35px;
+    margin-bottom: -15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: $light-color transparent transparent transparent;
+  }
+}
+.lsx-emojipicker-tabs {
+  img.emoji {
+    width: 22px;
+    margin: 5px 10px;
+    opacity: 0.5;
+    cursor: pointer;
+    &:HOVER {
+      opacity: 1;
+    }
+  }
+  li.selected img.emoji {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.lsx-emojipicker-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .spinner-container {
+    position: absolute;
+    background: #ffffffbd;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+  }
+}
+ul.lsx-emojipicker-tabs {
+  margin: 0;
+  padding: 0 0px;
+  list-style: none;
+  text-align: left;
+  background-color: $light-color;
+  //Instead of the line below you could use @include border-bottom-left-radius($radius)
+  border-bottom-left-radius: 4px;
+  //Instead of the line below you could use @include border-bottom-right-radius($radius)
+  border-bottom-right-radius: 4px;
+  border-top: 1px solid $light-semi-gray;
+  li {
+    display: inline-block;
+    text-align: left;
+    font-size: 15px;
+    padding: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    &.selected {
+      opacity: 1;
+      border-bottom: 2px solid #b5b5b5;
+    }
+    &:HOVER {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.lan-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+}
+.lan-column {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+.maxw_380 {
+  max-width: 380px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.lan-img_wrapper {
+  width: 50%;
+  float: left;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}

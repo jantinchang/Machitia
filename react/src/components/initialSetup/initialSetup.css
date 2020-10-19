@@ -1,0 +1,41 @@
+#profileCard {
+  position: relative;
+  right: -390px;
+  top: -370px;
+  width: 380px;
+  height: 400px;
+}
+
+#cardSize {
+  position: relative;
+  height: 580px;
+  width: 870px;
+}
+
+#buttons {
+  position: relative;
+
+  top: 150px;
+}
+
+#buttonsOrg {
+  position: relative;
+}
+
+#organizationCard {
+  position: relative;
+  width: 1100px;
+}
+
+#inputs {
+  width: 300px;
+}
+
+input.pac-target-input {
+  width: 1050px;
+  height: 40px;
+}
+
+.profile-details {
+  height: 250px;
+}

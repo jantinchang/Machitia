@@ -1,0 +1,54 @@
+/* .orgCard {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  width: 250px;
+  display: inline-block;
+}
+
+.orgCardImg {
+  height: 400px;
+  width: 400px;
+}
+
+.orgCardText {
+  width: 400px;
+  height: 100px;
+}
+
+
+
+.orgCardHeaderForm {
+  font-weight: bold;
+  font-size: x-large;
+  height: 75px;
+  text-align: center;
+  text-transform: uppercase;
+} */
+
+.mainCard {
+  flex-shrink: 0;
+  width: 100%;
+  height: 25rem !important;
+  object-fit: cover;
+}
+
+.orgimg {
+  text-align: center;
+  height: 200px;
+  width: 200px;
+}
+
+.orgNameTitleViewComponent {
+  font-size: calc(3vw + 2vh + 2vmin);
+  font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  font-stretch: expanded;
+}
+
+.organizationViewCard {
+  width: 150%;
+}
+
+.OrgCenterHeader {
+  text-align: center;
+}
